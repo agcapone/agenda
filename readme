@@ -1,0 +1,30 @@
+1- Generar el siguiente arbol:
+
+myapp/
+├── docker-compose.yml
+├── php/
+│   └── index.php
+│   └── guardar.php
+│   └── db_connect.php
+└── mariadb/
+    └── init.sql
+
+2- Ejecutar el siguiente comando:
+
+docker-compose up -d   # Volver a iniciar los contenedores
+
+3- Si desea detener y eliminar los contenedores existentes
+docker-compose down   
+
+4- Troubleshoting de la BBDD
+docker exec -it agenda_mariadb_1 mysql -u alejandro -p123456
+
+USE agenda;
+SHOW TABLES;
+SELECT * FROM usuarios;
+
+5- Troubleshooting de red
+
+docker network ls
+docker network inspect agenda_default
+
